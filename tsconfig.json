@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "jsx" : "react",
+    "allowJs": true
+  },
+   "include": [
+    "./src/**/*",
+    "./test/**/*",
+    "./webpack.*"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}
