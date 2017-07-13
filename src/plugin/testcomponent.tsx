@@ -3,30 +3,24 @@ import * as React from "react";
 import * as Semantic from "semantic-ui-react";
 import * as PH from "processhub-sdk";
 
-class LocalProps implements PH.PluginProperties {
-  actionHandler: PH.IActionHandler;
-  user: string;
+class LocalProps {
+  phEnvironment: any;
 }
 
 interface LocalState {
 }
 
-export class TestComponent extends React.Component<LocalProps, LocalState> {
+export class TestComponentView extends React.Component<LocalProps, LocalState> {
 
   constructor(props: LocalProps) {
     super(props);
   }
 
-  public async componentWillMount(): Promise<void> {
-    let ah = new PH.FrameActionHandler("plugin3", "Test3");
-    console.log("PROM: " + (await ah.getProcessDetails("ANFRAGE")).processId);
-  }
-
   public render(): JSX.Element {
-      return (<Semantic.Message>
-        <h2>TestPlugin Komponente</h2>  
-                             
-      </Semantic.Message>);
+      return (<div>
+        <h2>TestPlugin Komponente</h2> 
+        Environment.currentProcess.displayName = { this.props.phEnvironment.currentProcess.displayName }                           
+      </div>);
     }
 
 }

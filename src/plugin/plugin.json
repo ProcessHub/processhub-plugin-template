@@ -1,0 +1,17 @@
+{
+  "name": "plugin3",
+  "displayName": "Test Plugin",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/processhub/processhub-plugin-template"
+  },
+  "components": [  
+    { 
+      "name": "TestComponent",
+      "level": "Process",
+      "hooks": ["view"]
+    }
+  ]
+}

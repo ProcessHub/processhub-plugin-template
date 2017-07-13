@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Router, Route, browserHistory } from "react-router";
 import * as ReactDOM from "react-dom";
-import { TestComponent } from "../plugin/testcomponent";
+import { ComponentWrapper } from "./componentwrapper";
 
 export const routes = <Route>
-  <Route path="/plugin/testcomponentview" component={TestComponent} />
+  <Route path="/plugin/:component" component={ComponentWrapper} />
 </Route>;
 
 export class AppRouter extends React.Component<{}, {}> {
