@@ -3,12 +3,8 @@ import { RouterContext, match } from "react-router";
 import Hapi = require("hapi");
 import { renderToString } from "react-dom/server";
 
-export function renderRoute(request: Hapi.Request, reply: any) {
-  reply(renderFullPage());
-}
-
-function renderFullPage() {
-  return `<!DOCTYPE html>
+export function rootPage(request: Hapi.Request, reply: any) {
+  reply(`<!DOCTYPE html>
     <html>
       <head lang="en">
         <meta charset="UTF-8">
@@ -25,5 +21,5 @@ function renderFullPage() {
         <div id="ProcessHubPlugin" class="height100"></div>
         <script src="/dist/processhub-plugin.bundle.js"></script>      
       </body>
-    </html>`;
+    </html>`);
 }

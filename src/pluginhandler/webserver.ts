@@ -1,6 +1,6 @@
 import Hapi = require("hapi");
 import path = require("path");
-import { renderRoute } from "./renderroute";
+import { rootPage } from "./rootpage";
 
 const publicPath = path.join(__dirname, "../../../public");
 
@@ -80,7 +80,7 @@ async function configureServer(): Promise<void> {
   server.route({
     method: "GET",
     path: "/{name*}",
-    handler: renderRoute
+    handler: rootPage
   });
 }
 

@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     "processhub-plugin": [
       "babel-polyfill",
-      "./src/pluginpackage.tsx"]
+      "./src/pluginhandler/router.tsx"]
   },
   output: {
     filename: "[name].bundle.js",

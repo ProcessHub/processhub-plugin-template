@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Router, Route, browserHistory } from "react-router";
-import { Provider } from "react-redux";
-import { Test3 } from "./plugin3/test3";
+import * as ReactDOM from "react-dom";
+import { TestComponent } from "../plugin/testcomponent";
 
 export const routes = <Route>
-  <Route path="/plugin3/test3" component={Test3} />
+  <Route path="/plugin/testcomponentview" component={TestComponent} />
 </Route>;
 
 export class AppRouter extends React.Component<{}, {}> {
@@ -16,3 +16,8 @@ export class AppRouter extends React.Component<{}, {}> {
     );
   }
 }
+
+ReactDOM.render(
+    <AppRouter />
+  , document.getElementById("ProcessHubPlugin")
+);

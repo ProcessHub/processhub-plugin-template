@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Programm starten",
-      "program": "${workspaceRoot}/src/server/webserver.ts",
+      "program": "${workspaceRoot}/src/pluginhandler/webserver.ts",
       "cwd": "${workspaceRoot}",
       "outFiles": ["${workspaceRoot}/dist/**/*.js"],
       "sourceMaps": true
